@@ -1,0 +1,23 @@
+{
+  "version": "2.0",
+  "extensions": {
+    "durableTask": {
+      "storageProvider": {
+        "type": "mssql",
+        "connectionStringName": "SQLDB_Connection"
+      }
+    }
+  },
+  "logging": {
+    "logLevel": {
+      "default": "Information",
+      "DurableTask.SqlServer": "Trace",
+      "DurableTask.Core": "Trace"
+    },
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true
+      }
+    }
+  }
+}

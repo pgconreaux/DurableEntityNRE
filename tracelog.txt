@@ -1,0 +1,369 @@
+
+Azure Functions Core Tools
+Core Tools Version:       4.0.4915 Commit hash: N/A  (64-bit)
+Function Runtime Version: 4.14.0.19631
+
+[2023-01-26T16:30:50.611Z] Found C:\Users\conreaux\source\repos\nre-test-case\src\EntityTestCase.csproj. Using for user secrets file configuration.
+[2023-01-26T16:30:56.989Z] Building host: version spec: , startup suppressed: 'False', configuration suppressed: 'False', startup operation id: '1276327a-504b-4427-b666-680e5c2eae2d'
+[2023-01-26T16:30:57.038Z] Reading host configuration file 'C:\Users\conreaux\source\repos\nre-test-case\src\bin\Debug\net6.0\host.json'
+[2023-01-26T16:30:57.049Z] Host configuration file read:
+[2023-01-26T16:30:57.052Z] {
+[2023-01-26T16:30:57.055Z]   "version": "2.0",
+[2023-01-26T16:30:57.058Z]   "logging": {
+[2023-01-26T16:30:57.064Z]     "logLevel": {
+[2023-01-26T16:30:57.067Z]       "default": "Information",
+[2023-01-26T16:30:57.069Z]       "DurableTask.SqlServer": "Trace",
+[2023-01-26T16:30:57.071Z]       "DurableTask.Core": "Trace"
+[2023-01-26T16:30:57.073Z]     },
+[2023-01-26T16:30:57.081Z]     "applicationInsights": {
+[2023-01-26T16:30:57.083Z]       "samplingSettings": {
+[2023-01-26T16:30:57.085Z]         "isEnabled": true
+[2023-01-26T16:30:57.087Z]       }
+[2023-01-26T16:30:57.089Z]     }
+[2023-01-26T16:30:57.095Z]   },
+[2023-01-26T16:30:57.096Z]   "extensions": {
+[2023-01-26T16:30:57.099Z]     "durableTask": {
+[2023-01-26T16:30:57.102Z]       "storageProvider": {
+[2023-01-26T16:30:57.104Z]         "type": "mssql",
+[2023-01-26T16:30:57.113Z]         "connectionStringName": "SQLDB_Connection"
+[2023-01-26T16:30:57.121Z]       }
+[2023-01-26T16:30:57.129Z]     }
+[2023-01-26T16:30:57.134Z]   }
+[2023-01-26T16:30:57.145Z] }
+[2023-01-26T16:30:57.335Z] Loading extensions from C:\Users\conreaux\source\repos\nre-test-case\src\bin\Debug\net6.0\bin. BundleConfigured: False, PrecompiledFunctionApp: False, LegacyBundle: False
+[2023-01-26T16:30:57.367Z] Script Startup resetting load context with base path: 'C:\Users\conreaux\source\repos\nre-test-case\src\bin\Debug\net6.0\bin'.
+[2023-01-26T16:30:57.428Z] Loading startup extension 'SqlDurabilityProvider'
+[2023-01-26T16:30:57.983Z] Loaded extension 'SqlDurabilityProvider' (1.1.0.0)
+[2023-01-26T16:30:58.061Z] Loading startup extension 'DurableTask'
+[2023-01-26T16:30:58.204Z] Loaded extension 'DurableTask' (2.0.0.0)
+[2023-01-26T16:30:58.291Z] Reading host configuration file 'C:\Users\conreaux\source\repos\nre-test-case\src\bin\Debug\net6.0\host.json'
+[2023-01-26T16:30:58.304Z] Host configuration file read:
+[2023-01-26T16:30:58.307Z] {
+[2023-01-26T16:30:58.316Z]   "version": "2.0",
+[2023-01-26T16:30:58.319Z]   "logging": {
+[2023-01-26T16:30:58.323Z]     "logLevel": {
+[2023-01-26T16:30:58.332Z]       "default": "Information",
+[2023-01-26T16:30:58.339Z]       "DurableTask.SqlServer": "Trace",
+[2023-01-26T16:30:58.346Z]       "DurableTask.Core": "Trace"
+[2023-01-26T16:30:58.350Z]     },
+[2023-01-26T16:30:58.355Z]     "applicationInsights": {
+[2023-01-26T16:30:58.366Z]       "samplingSettings": {
+[2023-01-26T16:30:58.370Z]         "isEnabled": true
+[2023-01-26T16:30:58.377Z]       }
+[2023-01-26T16:30:58.382Z]     }
+[2023-01-26T16:30:58.394Z]   },
+[2023-01-26T16:30:58.402Z]   "extensions": {
+[2023-01-26T16:30:58.413Z]     "durableTask": {
+[2023-01-26T16:30:58.425Z]       "storageProvider": {
+[2023-01-26T16:30:58.429Z]         "type": "mssql",
+[2023-01-26T16:30:58.446Z]         "connectionStringName": "SQLDB_Connection"
+[2023-01-26T16:30:58.461Z]       }
+[2023-01-26T16:30:58.468Z]     }
+[2023-01-26T16:30:58.476Z]   }
+[2023-01-26T16:30:58.481Z] }
+[2023-01-26T16:31:01.310Z] Using the mssql storage provider.
+[2023-01-26T16:31:04.969Z] Initializing Warmup Extension.
+[2023-01-26T16:31:05.030Z] Resolved secret storage provider FileSystemSecretsRepository
+[2023-01-26T16:31:05.253Z] Durable extension configuration loaded: {"httpSettings":{"defaultAsyncRequestSleepTimeMilliseconds":30000},"hubName":"TestHubName","storageProvider":{"connectionStringName":"SQLDB_Connection","taskHubName":"TestHubName","taskEventLockTimeout":"00:02:00","taskEventBatchSize":10,"createDatabaseIfNotExists":false,"schemaName":null},"tracing":{"traceInputsAndOutputs":false,"allowVerboseLinuxTelemetry":false,"traceReplayEvents":false,"distributedTracingEnabled":false,"distributedTracingProtocol":"HttpCorrelationProtocol"},"notifications":{"eventGrid":null},"maxConcurrentActivityFunctions":null,"maxConcurrentOrchestratorFunctions":null,"localRpcEndpointEnabled":null,"maxEntityOperationBatchSize":null,"extendedSessionsEnabled":false,"extendedSessionIdleTimeoutInSeconds":30,"maxOrchestrationActions":100000,"overridableExistingInstanceStates":"NonRunningStates","entityMessageReorderWindowInMinutes":30,"useGracefulShutdown":false,"rollbackEntityOperationsOnExceptions":true,"useAppLease":true,"storeInputsInOrchestrationHistory":false,"appLeaseOptions":{"renewInterval":"00:00:25","acquireInterval":"00:05:00","leaseInterval":"00:01:00"}}. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0.
+[2023-01-26T16:31:05.456Z] Initializing Host. OperationId: '1276327a-504b-4427-b666-680e5c2eae2d'.
+[2023-01-26T16:31:05.492Z] Host initialization: ConsecutiveErrors=0, StartupCount=1, OperationId=1276327a-504b-4427-b666-680e5c2eae2d
+[2023-01-26T16:31:05.598Z] LoggerFilterOptions
+[2023-01-26T16:31:05.604Z] {
+[2023-01-26T16:31:05.606Z]   "MinLevel": "None",
+[2023-01-26T16:31:05.610Z]   "Rules": [
+[2023-01-26T16:31:05.613Z]     {
+[2023-01-26T16:31:05.623Z]       "ProviderName": null,
+[2023-01-26T16:31:05.625Z]       "CategoryName": null,
+[2023-01-26T16:31:05.627Z]       "LogLevel": null,
+[2023-01-26T16:31:05.633Z]       "Filter": "<AddFilter>b__0"
+[2023-01-26T16:31:05.641Z]     },
+[2023-01-26T16:31:05.648Z]     {
+[2023-01-26T16:31:05.654Z]       "ProviderName": null,
+[2023-01-26T16:31:05.656Z]       "CategoryName": "DurableTask.SqlServer",
+[2023-01-26T16:31:05.658Z]       "LogLevel": "Trace",
+[2023-01-26T16:31:05.661Z]       "Filter": null
+[2023-01-26T16:31:05.663Z]     },
+[2023-01-26T16:31:05.665Z]     {
+[2023-01-26T16:31:05.667Z]       "ProviderName": null,
+[2023-01-26T16:31:05.669Z]       "CategoryName": "DurableTask.Core",
+[2023-01-26T16:31:05.671Z]       "LogLevel": "Trace",
+[2023-01-26T16:31:05.673Z]       "Filter": null
+[2023-01-26T16:31:05.684Z]     },
+[2023-01-26T16:31:05.687Z]     {
+[2023-01-26T16:31:05.690Z]       "ProviderName": null,
+[2023-01-26T16:31:05.694Z]       "CategoryName": null,
+[2023-01-26T16:31:05.696Z]       "LogLevel": "Information",
+[2023-01-26T16:31:05.699Z]       "Filter": null
+[2023-01-26T16:31:05.701Z]     },
+[2023-01-26T16:31:05.703Z]     {
+[2023-01-26T16:31:05.705Z]       "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+[2023-01-26T16:31:05.713Z]       "CategoryName": null,
+[2023-01-26T16:31:05.716Z]       "LogLevel": "None",
+[2023-01-26T16:31:05.718Z]       "Filter": null
+[2023-01-26T16:31:05.720Z]     },
+[2023-01-26T16:31:05.722Z]     {
+[2023-01-26T16:31:05.730Z]       "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+[2023-01-26T16:31:05.734Z]       "CategoryName": null,
+[2023-01-26T16:31:05.737Z]       "LogLevel": null,
+[2023-01-26T16:31:05.742Z]       "Filter": "<AddFilter>b__0"
+[2023-01-26T16:31:05.745Z]     },
+[2023-01-26T16:31:05.748Z]     {
+[2023-01-26T16:31:05.751Z]       "ProviderName": "Azure.Functions.Cli.Diagnostics.ColoredConsoleLoggerProvider",
+[2023-01-26T16:31:05.761Z]       "CategoryName": null,
+[2023-01-26T16:31:05.763Z]       "LogLevel": null,
+[2023-01-26T16:31:05.767Z]       "Filter": "<AddFilter>b__0"
+[2023-01-26T16:31:05.776Z]     }
+[2023-01-26T16:31:05.780Z]   ]
+[2023-01-26T16:31:05.785Z] }
+[2023-01-26T16:31:05.792Z] LoggerFilterOptions
+[2023-01-26T16:31:05.795Z] {
+[2023-01-26T16:31:05.800Z]   "MinLevel": "None",
+[2023-01-26T16:31:05.808Z]   "Rules": [
+[2023-01-26T16:31:05.815Z]     {
+[2023-01-26T16:31:05.824Z]       "ProviderName": null,
+[2023-01-26T16:31:05.827Z]       "CategoryName": null,
+[2023-01-26T16:31:05.830Z]       "LogLevel": null,
+[2023-01-26T16:31:05.838Z]       "Filter": "<AddFilter>b__0"
+[2023-01-26T16:31:05.841Z]     },
+[2023-01-26T16:31:05.844Z]     {
+[2023-01-26T16:31:05.847Z]       "ProviderName": null,
+[2023-01-26T16:31:05.854Z]       "CategoryName": "DurableTask.SqlServer",
+[2023-01-26T16:31:05.856Z]       "LogLevel": "Trace",
+[2023-01-26T16:31:05.859Z]       "Filter": null
+[2023-01-26T16:31:05.861Z]     },
+[2023-01-26T16:31:05.864Z]     {
+[2023-01-26T16:31:05.874Z]       "ProviderName": null,
+[2023-01-26T16:31:05.877Z]       "CategoryName": "DurableTask.Core",
+[2023-01-26T16:31:05.880Z]       "LogLevel": "Trace",
+[2023-01-26T16:31:05.887Z]       "Filter": null
+[2023-01-26T16:31:05.890Z]     },
+[2023-01-26T16:31:05.893Z]     {
+[2023-01-26T16:31:05.896Z]       "ProviderName": null,
+[2023-01-26T16:31:05.904Z]       "CategoryName": null,
+[2023-01-26T16:31:05.907Z]       "LogLevel": "Information",
+[2023-01-26T16:31:05.911Z]       "Filter": null
+[2023-01-26T16:31:05.917Z]     },
+[2023-01-26T16:31:05.921Z]     {
+[2023-01-26T16:31:05.924Z]       "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+[2023-01-26T16:31:05.927Z]       "CategoryName": null,
+[2023-01-26T16:31:05.936Z]       "LogLevel": "None",
+[2023-01-26T16:31:05.939Z]       "Filter": null
+[2023-01-26T16:31:05.942Z]     },
+[2023-01-26T16:31:05.950Z]     {
+[2023-01-26T16:31:05.953Z]       "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+[2023-01-26T16:31:05.957Z]       "CategoryName": null,
+[2023-01-26T16:31:05.963Z]       "LogLevel": null,
+[2023-01-26T16:31:05.965Z]       "Filter": "<AddFilter>b__0"
+[2023-01-26T16:31:05.968Z]     },
+[2023-01-26T16:31:05.970Z]     {
+[2023-01-26T16:31:05.972Z]       "ProviderName": "Azure.Functions.Cli.Diagnostics.ColoredConsoleLoggerProvider",
+[2023-01-26T16:31:05.979Z]       "CategoryName": null,
+[2023-01-26T16:31:05.983Z]       "LogLevel": null,
+[2023-01-26T16:31:05.987Z]       "Filter": "<AddFilter>b__0"
+[2023-01-26T16:31:05.993Z]     }
+[2023-01-26T16:31:06.007Z]   ]
+[2023-01-26T16:31:06.010Z] }
+[2023-01-26T16:31:06.013Z] ConcurrencyOptions
+[2023-01-26T16:31:06.017Z] {
+[2023-01-26T16:31:06.024Z]   "DynamicConcurrencyEnabled": false,
+[2023-01-26T16:31:06.028Z]   "MaximumFunctionConcurrency": 500,
+[2023-01-26T16:31:06.031Z]   "CPUThreshold": 0.8,
+[2023-01-26T16:31:06.035Z]   "SnapshotPersistenceEnabled": true
+[2023-01-26T16:31:06.043Z] }
+[2023-01-26T16:31:06.045Z] FunctionResultAggregatorOptions
+[2023-01-26T16:31:06.049Z] {
+[2023-01-26T16:31:06.055Z]   "BatchSize": 1000,
+[2023-01-26T16:31:06.058Z]   "FlushTimeout": "00:00:30",
+[2023-01-26T16:31:06.061Z]   "IsEnabled": true
+[2023-01-26T16:31:06.063Z] }
+[2023-01-26T16:31:06.070Z] SingletonOptions
+[2023-01-26T16:31:06.072Z] {
+[2023-01-26T16:31:06.075Z]   "LockPeriod": "00:00:15",
+[2023-01-26T16:31:06.077Z]   "ListenerLockPeriod": "00:00:15",
+[2023-01-26T16:31:06.080Z]   "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+[2023-01-26T16:31:06.089Z]   "LockAcquisitionPollingInterval": "00:00:05",
+[2023-01-26T16:31:06.091Z]   "ListenerLockRecoveryPollingInterval": "00:01:00"
+[2023-01-26T16:31:06.094Z] }
+[2023-01-26T16:31:06.101Z] Starting JobHost
+[2023-01-26T16:31:06.124Z] Starting Host (HostId=msdnconreaux-1882140641, InstanceId=351e22e9-8231-49ad-8737-17a137281112, Version=4.14.0.19631, ProcessId=15904, AppDomainId=1, InDebugMode=False, InDiagnosticMode=False, FunctionsExtensionVersion=(null))
+[2023-01-26T16:31:06.195Z] Loading functions metadata
+[2023-01-26T16:31:06.210Z] Reading functions metadata
+[2023-01-26T16:31:06.220Z] Reading functions metadata
+[2023-01-26T16:31:06.258Z] 4 functions found
+[2023-01-26T16:31:06.262Z] 4 functions found
+[2023-01-26T16:31:06.290Z] Reading functions metadata
+[2023-01-26T16:31:06.318Z] 1 functions found
+[2023-01-26T16:31:06.329Z] 4 functions loaded
+[2023-01-26T16:31:06.690Z] Generating 4 job function(s)
+[2023-01-26T16:31:06.901Z] Found the following functions:
+[2023-01-26T16:31:06.905Z] Counter.Run
+[2023-01-26T16:31:06.907Z] IncrementThenGet.GetEntityAsync
+[2023-01-26T16:31:06.909Z] IncrementThenGet.Run
+[2023-01-26T16:31:06.915Z] HttpSurface.TestGet
+[2023-01-26T16:31:06.918Z]
+[2023-01-26T16:31:06.973Z] HttpOptions
+[2023-01-26T16:31:06.977Z] {
+[2023-01-26T16:31:06.979Z]   "DynamicThrottlesEnabled": false,
+[2023-01-26T16:31:06.981Z] Initializing function HTTP routes
+[2023-01-26T16:31:06.981Z]   "EnableChunkedRequestBinding": false,
+[2023-01-26T16:31:06.984Z] Mapped function route 'api/test' [get] to 'TestGet'
+[2023-01-26T16:31:06.987Z]   "MaxConcurrentRequests": -1,
+[2023-01-26T16:31:06.995Z]
+[2023-01-26T16:31:06.998Z]   "MaxOutstandingRequests": -1,
+[2023-01-26T16:31:07.004Z]   "RoutePrefix": "api"
+[2023-01-26T16:31:07.017Z] }
+[2023-01-26T16:31:07.045Z] Host initialized (864ms)
+[2023-01-26T16:31:07.077Z] Starting task hub worker. InstanceId: . Function: . HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 0.
+
+Functions:
+
+        TestGet: [GET] http://localhost:7288/api/test
+
+        Counter: entityTrigger
+
+        GetEntityAsync: orchestrationTrigger
+
+        IncrementThenGet: orchestrationTrigger
+
+For detailed output, run func with --verbose flag.
+[2023-01-26T16:31:08.907Z] Acquired app lock after 277ms (status code = 0)
+[2023-01-26T16:31:09.043Z] Executed stored procedure dt._GetVersions in 82ms
+[2023-01-26T16:31:09.226Z] Durable task hub worker is starting
+[2023-01-26T16:31:09.277Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Starting dispatch loop
+[2023-01-26T16:31:09.288Z] TaskActivityDispatcher-2fbb75dac381411d92712078945a9b51-0: Starting dispatch loop
+[2023-01-26T16:31:09.295Z] Durable task hub worker started successfully after 61ms
+[2023-01-26T16:31:09.300Z] Task hub worker started. Latency: 00:00:02.2134037. InstanceId: . Function: . HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 1.
+[2023-01-26T16:31:09.310Z] TaskActivityDispatcher-2fbb75dac381411d92712078945a9b51-0: Fetching next work item. Current active work-item count: 0. Maximum active work-item count: 8. Timeout: 30s
+[2023-01-26T16:31:09.310Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Fetching next work item. Current active work-item count: 0. Maximum active work-item count: 8. Timeout: 30s
+[2023-01-26T16:31:09.314Z] Host started (3178ms)
+[2023-01-26T16:31:09.327Z] Job host started
+[2023-01-26T16:31:09.404Z] Executed stored procedure dt._LockNextTask in 51ms
+[2023-01-26T16:31:09.489Z] Executed stored procedure dt._LockNextTask in 3ms
+[2023-01-26T16:31:09.516Z] Executed stored procedure dt._LockNextOrchestration in 38ms
+[2023-01-26T16:31:09.529Z] No events were found. Waiting for new events to appear.
+[2023-01-26T16:31:09.534Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[2023-01-26T16:31:09.559Z] Executed stored procedure dt._LockNextTask in 1ms
+[2023-01-26T16:31:09.613Z] Executed stored procedure dt._LockNextOrchestration in 0ms
+[2023-01-26T16:31:09.678Z] Executed stored procedure dt._LockNextTask in 1ms
+[2023-01-26T16:31:09.738Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[2023-01-26T16:31:09.837Z] Executed stored procedure dt._LockNextTask in 1ms
+[2023-01-26T16:31:09.910Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[2023-01-26T16:31:10.094Z] Executed stored procedure dt._LockNextTask in 2ms
+[2023-01-26T16:31:10.159Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[2023-01-26T16:31:10.548Z] Executed stored procedure dt._LockNextTask in 1ms
+[2023-01-26T16:31:10.645Z] Host lock lease acquired by instance ID '0000000000000000000000009ECF1135'.
+[2023-01-26T16:31:10.659Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[2023-01-26T16:31:11.375Z] Executed stored procedure dt._LockNextTask in 0ms
+[2023-01-26T16:31:11.625Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[2023-01-26T16:31:12.851Z] Executed stored procedure dt._LockNextTask in 51ms
+[2023-01-26T16:31:13.420Z] Executed stored procedure dt._LockNextOrchestration in 2ms
+[2023-01-26T16:31:13.712Z] Executing HTTP request: {
+[2023-01-26T16:31:13.719Z]   requestId: "1c37d856-7997-4fc8-b2ea-87d78c41ad5e",
+[2023-01-26T16:31:13.723Z]   method: "GET",
+[2023-01-26T16:31:13.727Z]   userAgent: "PostmanRuntime/7.30.0",
+[2023-01-26T16:31:13.731Z]   uri: "/api/test"
+[2023-01-26T16:31:13.740Z] }
+[2023-01-26T16:31:14.425Z] Executing 'TestGet' (Reason='This function was programmatically called via the host APIs.', Id=97995324-dc7d-4165-8b14-e0a9aac28159)
+[2023-01-26T16:31:14.547Z] 049500471f5c4e63a61a8f1a259ce7ce: Function 'IncrementThenGet (Orchestrator)' scheduled. Reason: NewInstance. IsReplay: False. State: Scheduled. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 2.
+[2023-01-26T16:31:14.665Z] 049500471f5c4e63a61a8f1a259ce7ce: Executed stored procedure dt.CreateInstance in 54ms
+[2023-01-26T16:31:14.923Z] Executed 'TestGet' (Succeeded, Id=97995324-dc7d-4165-8b14-e0a9aac28159, Duration=559ms)
+[2023-01-26T16:31:15.142Z] Executed HTTP request: {
+[2023-01-26T16:31:15.287Z]   requestId: "1c37d856-7997-4fc8-b2ea-87d78c41ad5e",
+[2023-01-26T16:31:15.309Z]   identities: "",
+[2023-01-26T16:31:15.314Z]   status: "202",
+[2023-01-26T16:31:15.333Z]   duration: "1419"
+[2023-01-26T16:31:15.345Z] }
+[2023-01-26T16:31:15.843Z] Executed stored procedure dt._LockNextTask in 40ms
+[2023-01-26T16:31:16.477Z] Executed stored procedure dt._LockNextOrchestration in 37ms
+[2023-01-26T16:31:16.571Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Fetched next work item '049500471f5c4e63a61a8f1a259ce7ce' after 7243ms. Current active work-item count: 0. Maximum active work-item count: 8
+[2023-01-26T16:31:16.581Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Fetching next work item. Current active work-item count: 1. Maximum active work-item count: 8. Timeout: 30s
+[2023-01-26T16:31:16.601Z] Executed stored procedure dt._LockNextOrchestration in 7ms[2023-01-26T16:31:16.610Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Processing work-item '049500471f5c4e63a61a8f1a259ce7ce'
+
+[2023-01-26T16:31:16.623Z] No events were found. Waiting for new events to appear.
+[2023-01-26T16:31:16.638Z] Executed stored procedure dt._LockNextOrchestration in 10ms
+[2023-01-26T16:31:16.723Z] 049500471f5c4e63a61a8f1a259ce7ce: Preparing to process a [ExecutionStarted] message
+[2023-01-26T16:31:16.737Z] 049500471f5c4e63a61a8f1a259ce7ce: Executing 'IncrementThenGet' orchestration logic
+[2023-01-26T16:31:16.742Z] Executed stored procedure dt._LockNextOrchestration in 2ms
+[2023-01-26T16:31:16.905Z] Executed stored procedure dt._LockNextOrchestration in 19ms
+[2023-01-26T16:31:16.967Z] Executing 'IncrementThenGet' (Reason='(null)', Id=bd8ec8d5-8363-468b-b27a-b0dd7a870d2e)
+[2023-01-26T16:31:17.076Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[2023-01-26T16:31:17.108Z] 049500471f5c4e63a61a8f1a259ce7ce: Function 'IncrementThenGet (Orchestrator)' started. IsReplay: False. Input: (null). State: Started. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 3. TaskEventId: -1
+[2023-01-26T16:31:17.225Z] 049500471f5c4e63a61a8f1a259ce7ce: Function 'counter (Entity)' scheduled. Reason: IncrementThenGet. IsReplay: False. State: Scheduled. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 4.
+[2023-01-26T16:31:17.274Z] 049500471f5c4e63a61a8f1a259ce7ce: Function 'GetEntityAsync (Orchestrator)' scheduled. Reason: IncrementThenGet. IsReplay: False. State: Scheduled. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 5.
+[2023-01-26T16:31:17.306Z] Executed 'IncrementThenGet' (Succeeded, Id=bd8ec8d5-8363-468b-b27a-b0dd7a870d2e, Duration=358ms)
+[2023-01-26T16:31:17.329Z] 049500471f5c4e63a61a8f1a259ce7ce: Function 'IncrementThenGet (Orchestrator)' awaited. IsReplay: False. State: Awaited. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 6.
+[2023-01-26T16:31:17.375Z] 049500471f5c4e63a61a8f1a259ce7ce: Orchestration 'IncrementThenGet' awaited and scheduled 2 durable operation(s).
+[2023-01-26T16:31:17.391Z] Executed stored procedure dt._LockNextOrchestration in 2ms
+[2023-01-26T16:31:17.392Z] 049500471f5c4e63a61a8f1a259ce7ce: Raising 'op' event with 369 bytes to '@counter@myCounter'
+[2023-01-26T16:31:17.431Z] 049500471f5c4e63a61a8f1a259ce7ce: Scheduling orchestration 'GetEntityAsync' with instance ID = 'a6e19995ce2d41ad80520eaefa929def:1' and 150 bytes of input
+[2023-01-26T16:31:17.476Z] 049500471f5c4e63a61a8f1a259ce7ce: Checkpointing orchestration 'IncrementThenGet' with status: Running
+[2023-01-26T16:31:17.887Z] Executed stored procedure dt._LockNextOrchestration in 7ms
+[2023-01-26T16:31:17.974Z] 049500471f5c4e63a61a8f1a259ce7ce: Executed stored procedure dt._CheckpointOrchestration in 470ms
+[2023-01-26T16:31:17.990Z] 049500471f5c4e63a61a8f1a259ce7ce: Checkpoint of 'IncrementThenGet' completed. Latency: 502ms
+[2023-01-26T16:31:18.007Z] Executed stored procedure dt._LockNextOrchestration in 18ms
+[2023-01-26T16:31:18.011Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Finished processing work-item '049500471f5c4e63a61a8f1a259ce7ce'
+[2023-01-26T16:31:18.021Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Fetched next work item '@counter@myCounter' after 1426ms. Current active work-item count: 0. Maximum active work-item count: 8
+[2023-01-26T16:31:18.032Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Processing work-item '@counter@myCounter'[2023-01-26T16:31:18.032Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Fetching next work item. Current active work-item count: 1. Maximum active work-item count: 8. Timeout: 30s
+
+[2023-01-26T16:31:18.058Z] @counter@myCounter: Preparing to process a [ExecutionStarted] message
+[2023-01-26T16:31:18.059Z] Executed stored procedure dt._LockNextOrchestration in 2ms
+[2023-01-26T16:31:18.061Z] @counter@myCounter: Preparing to process a [EventRaised] message
+[2023-01-26T16:31:18.074Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Fetched next work item 'a6e19995ce2d41ad80520eaefa929def:1' after 17ms. Current active work-item count: 1. Maximum active work-item count: 8[2023-01-26T16:31:18.078Z] @counter@myCounter: Executing '@counter@myCounter' orchestration logic
+
+[2023-01-26T16:31:18.105Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Processing work-item 'a6e19995ce2d41ad80520eaefa929def:1'
+[2023-01-26T16:31:18.105Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Fetching next work item. Current active work-item count: 2. Maximum active work-item count: 8. Timeout: 30s
+[2023-01-26T16:31:18.152Z] a6e19995ce2d41ad80520eaefa929def:1: Preparing to process a [ExecutionStarted#1] message
+[2023-01-26T16:31:18.162Z] Executed stored procedure dt._LockNextOrchestration in 4ms
+[2023-01-26T16:31:18.172Z] a6e19995ce2d41ad80520eaefa929def:1: Executing 'GetEntityAsync' orchestration logic
+[2023-01-26T16:31:18.181Z] No events were found. Waiting for new events to appear.
+[2023-01-26T16:31:18.190Z] Executing 'GetEntityAsync' (Reason='(null)', Id=50039b1f-d8d0-4e54-aad0-7b42f68baf36)
+[2023-01-26T16:31:18.204Z] Executed stored procedure dt._LockNextOrchestration in 3ms
+[2023-01-26T16:31:18.228Z] a6e19995ce2d41ad80520eaefa929def:1: Function 'GetEntityAsync (Orchestrator)' started. IsReplay: False. Input: (600 bytes). State: Started. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 7. TaskEventId: -1
+[2023-01-26T16:31:18.188Z] Executing 'Counter' (Reason='(null)', Id=5a9473b8-3801-4c87-9d5a-28fd928ba7cf)
+[2023-01-26T16:31:18.271Z] @counter@myCounter: Function 'counter (Entity)' started. IsReplay: False. Input: (null). State: Started. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 8. TaskEventId: -1
+[2023-01-26T16:31:18.305Z] a6e19995ce2d41ad80520eaefa929def:1: Function 'GetEntityAsync (Orchestrator)' is waiting for input. Reason: WaitForEntityResponse:f921b92e-8cac-5b03-a63c-069eb163c5e4. IsReplay: False. State: Listening. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 9.
+[2023-01-26T16:31:18.327Z] Executed stored procedure dt._LockNextOrchestration in 3ms
+[2023-01-26T16:31:18.334Z] a6e19995ce2d41ad80520eaefa929def:1: Function 'counter (Entity)' scheduled. Reason: GetEntityAsync. IsReplay: False. State: Scheduled. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 10.
+[2023-01-26T16:31:18.363Z] Executed 'GetEntityAsync' (Succeeded, Id=50039b1f-d8d0-4e54-aad0-7b42f68baf36, Duration=173ms)
+[2023-01-26T16:31:18.374Z] a6e19995ce2d41ad80520eaefa929def:1: Function 'GetEntityAsync (Orchestrator)' awaited. IsReplay: False. State: Awaited. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 11.
+[2023-01-26T16:31:18.380Z] a6e19995ce2d41ad80520eaefa929def:1: Orchestration 'GetEntityAsync' awaited and scheduled 1 durable operation(s).
+[2023-01-26T16:31:18.392Z] @counter@myCounter: Function 'counter (Entity)' created entity state in 'Add' operation 75d4f11e-28be-5c07-a869-44e9168b11b7. State: EntityStateCreated. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 12.
+[2023-01-26T16:31:18.395Z] a6e19995ce2d41ad80520eaefa929def:1: Raising 'op' event with 345 bytes to '@counter@myCounter'
+[2023-01-26T16:31:18.416Z] @counter@myCounter: Function 'counter (Entity)' completed 'Add' operation 75d4f11e-28be-5c07-a869-44e9168b11b7 in 66.2129ms. IsReplay: False. Input: (null). Output: (null). HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 13.
+[2023-01-26T16:31:18.422Z] a6e19995ce2d41ad80520eaefa929def:1: Checkpointing orchestration 'GetEntityAsync' with status: Running
+[2023-01-26T16:31:18.466Z] Executed stored procedure dt._LockNextOrchestration in 3ms
+[2023-01-26T16:31:18.470Z] a6e19995ce2d41ad80520eaefa929def:1: Executed stored procedure dt._CheckpointOrchestration in 19ms
+[2023-01-26T16:31:18.485Z] a6e19995ce2d41ad80520eaefa929def:1: Checkpoint of 'GetEntityAsync' completed. Latency: 34ms
+[2023-01-26T16:31:18.489Z] Executed stored procedure dt._LockNextOrchestration in 3ms
+[2023-01-26T16:31:18.498Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Finished processing work-item 'a6e19995ce2d41ad80520eaefa929def:1'
+[2023-01-26T16:31:18.572Z] Executed stored procedure dt._LockNextOrchestration in 2ms
+[2023-01-26T16:31:18.585Z] @counter@myCounter: Function 'counter (Entity)' completed. ContinuedAsNew: True. IsReplay: False. Output: (44 bytes). State: Completed. HubName: TestHubName. AppName: . SlotName: . ExtensionVersion: 2.9.0. SequenceNumber: 14. TaskEventId: -1
+[2023-01-26T16:31:18.598Z] Executed 'Counter' (Succeeded, Id=5a9473b8-3801-4c87-9d5a-28fd928ba7cf, Duration=415ms)
+[2023-01-26T16:31:18.616Z] @counter@myCounter: Orchestration '@counter@myCounter' awaited and scheduled 1 durable operation(s).
+[2023-01-26T16:31:18.640Z] @counter@myCounter: Orchestration completed with a 'ContinuedAsNew' status and 51 bytes of output. Details:
+[2023-01-26T16:31:18.649Z] @counter@myCounter: Executing '@counter@myCounter' orchestration logic
+[2023-01-26T16:31:18.656Z] @counter@myCounter: Orchestration '@counter@myCounter' awaited and scheduled 0 durable operation(s).
+[2023-01-26T16:31:18.668Z] @counter@myCounter: Checkpointing orchestration '@counter@myCounter' with status: Running
+[2023-01-26T16:31:18.699Z] Executed stored procedure dt._LockNextOrchestration in 2ms[2023-01-26T16:31:18.703Z] @counter@myCounter: Executed stored procedure dt._CheckpointOrchestration in 31ms
+
+[2023-01-26T16:31:18.723Z] @counter@myCounter: Checkpoint of '@counter@myCounter' completed. Latency: 51ms
+[2023-01-26T16:31:18.733Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Finished processing work-item '@counter@myCounter'
+[2023-01-26T16:31:18.884Z] Executed stored procedure dt._LockNextTask in 1ms
+[2023-01-26T16:31:18.886Z] Executed stored procedure dt._LockNextOrchestration in 2ms
+[2023-01-26T16:31:18.900Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Fetched next work item '@counter@myCounter' after 742ms. Current active work-item count: 0. Maximum active work-item count: 8
+[2023-01-26T16:31:18.908Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Fetching next work item. Current active work-item count: 1. Maximum active work-item count: 8. Timeout: 30s
+[2023-01-26T16:31:18.909Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Processing work-item '@counter@myCounter'
+[2023-01-26T16:31:18.923Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[2023-01-26T16:31:18.931Z] @counter@myCounter: Preparing to process a [EventRaised] message
+[2023-01-26T16:31:18.953Z] No events were found. Waiting for new events to appear.
+[2023-01-26T16:31:18.958Z] @counter@myCounter: Executing '@counter@myCounter' orchestration logic
+[2023-01-26T16:31:18.969Z] Executed stored procedure dt._LockNextOrchestration in 2ms
+[2023-01-26T16:31:19.001Z] @counter@myCounter: Orchestration execution was aborted: Session aborted because of NullReferenceException
+[2023-01-26T16:31:19.010Z] TaskOrchestrationDispatcher-a6c872955d0e401bb72e4cbe0eb0b13b-0: Finished processing work-item '@counter@myCounter'
+[2023-01-26T16:31:19.043Z] Executed stored procedure dt._LockNextOrchestration in 2ms
+[2023-01-26T16:31:19.168Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[2023-01-26T16:31:19.340Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[2023-01-26T16:31:19.683Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[2023-01-26T16:31:20.188Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[2023-01-26T16:31:20.976Z] Executed stored procedure dt._LockNextOrchestration in 1ms
+[
